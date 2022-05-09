@@ -91,9 +91,7 @@ return "Saqlanmadi";
 
                 FileCopyUtils.copy(attachmentContent.getBytes(),response.getOutputStream());
             }
-
         }
-
     }
 
     @GetMapping("/getFileFromsytem/{id}")
@@ -105,7 +103,6 @@ return "Saqlanmadi";
             response.setContentType(attachment.getContentType());
             FileInputStream fileInputStream=new FileInputStream(uploadDirectory+"/"+attachment.getName());
                     FileCopyUtils.copy(fileInputStream,response.getOutputStream());
-
         }
     }
 }
